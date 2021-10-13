@@ -1,10 +1,11 @@
 # Team-2
 
 # User Stories
-- Account Creation
-- Login/Logout
-- Post Creation Form
-- Comment On Post
+- Users can:
+  - Create an account
+  - Login/Logout
+  - Create a post
+  - Comment on posts
 
 # Stretch Goals
 - Interacting With Comments
