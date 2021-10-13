@@ -12,7 +12,7 @@
     - Comment on food
     - Rating food
     - Name of resteraunt
-    - Reccomend resteraunt
+    - Recommend resteraunt
   - Comment on posts
 
 # Stretch Goals
