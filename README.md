@@ -3,6 +3,9 @@
 # User Stories
 - Users can:
   - Create an account
+    - Username
+    - Password
+    - E-mail
   - Login/Logout
   - Create a post
     - Upload an image
