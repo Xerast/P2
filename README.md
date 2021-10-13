@@ -6,6 +6,10 @@
   - Login/Logout
   - Create a post
     - Upload an image
+    - Comment on food
+    - Rating food
+    - Name of resteraunt
+    - Reccomend resteraunt
   - Comment on posts
 
 # Stretch Goals
