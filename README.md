@@ -5,6 +5,7 @@
   - Create an account
   - Login/Logout
   - Create a post
+    - Upload an image
   - Comment on posts
 
 # Stretch Goals
