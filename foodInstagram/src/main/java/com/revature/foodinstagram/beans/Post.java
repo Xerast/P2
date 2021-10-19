@@ -17,7 +17,7 @@ public class Post {
 
     private String title;
     private String body;
-    private String rest_name;
+    private String image_url;
 
     @ManyToOne
     @JoinColumn(name = "rec_rest_id")
@@ -29,22 +29,22 @@ public class Post {
     public Post() {
     }
 
-    public Post(User user, String title, String body, String rest_name, Restaurant restaurant, boolean recommend_rest, int rating) {
+    public Post(User user, String title, String body, String image_url, Restaurant restaurant, boolean recommend_rest, int rating) {
         this.user = user;
         this.title = title;
         this.body = body;
-        this.rest_name = rest_name;
+        this.image_url = image_url;
         this.restaurant = restaurant;
         this.recommend_rest = recommend_rest;
         this.rating = rating;
     }
 
-    public Post(int id, User user, String title, String body, String rest_name, Restaurant restaurant, boolean recommend_rest, int rating) {
+    public Post(int id, User user, String title, String body, String image_url, Restaurant restaurant, boolean recommend_rest, int rating) {
         this.id = id;
         this.user = user;
         this.title = title;
         this.body = body;
-        this.rest_name = rest_name;
+        this.image_url = image_url;
         this.restaurant = restaurant;
         this.recommend_rest = recommend_rest;
         this.rating = rating;
@@ -82,12 +82,12 @@ public class Post {
         this.body = body;
     }
 
-    public String getRest_name() {
-        return rest_name;
+    public String getImage_url() {
+        return image_url;
     }
 
-    public void setRest_name(String rest_name) {
-        this.rest_name = rest_name;
+    public void setImage_url(String image_url) {
+        this.image_url = image_url;
     }
 
     public Restaurant getRestaurant() {
@@ -121,40 +121,11 @@ public class Post {
                 ", user=" + user +
                 ", title='" + title + '\'' +
                 ", body='" + body + '\'' +
-                ", rest_name='" + rest_name + '\'' +
+                ", image_url='" + image_url + '\'' +
                 ", restaurant=" + restaurant +
                 ", recommend_rest=" + recommend_rest +
                 ", rating=" + rating +
                 '}';
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Post post = (Post) o;
-
-        if (id != post.id) return false;
-        if (recommend_rest != post.recommend_rest) return false;
-        if (rating != post.rating) return false;
-        if (user != null ? !user.equals(post.user) : post.user != null) return false;
-        if (title != null ? !title.equals(post.title) : post.title != null) return false;
-        if (body != null ? !body.equals(post.body) : post.body != null) return false;
-        if (rest_name != null ? !rest_name.equals(post.rest_name) : post.rest_name != null) return false;
-        return restaurant != null ? restaurant.equals(post.restaurant) : post.restaurant == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + (user != null ? user.hashCode() : 0);
-        result = 31 * result + (title != null ? title.hashCode() : 0);
-        result = 31 * result + (body != null ? body.hashCode() : 0);
-        result = 31 * result + (rest_name != null ? rest_name.hashCode() : 0);
-        result = 31 * result + (restaurant != null ? restaurant.hashCode() : 0);
-        result = 31 * result + (recommend_rest ? 1 : 0);
-        result = 31 * result + rating;
-        return result;
-    }
 }

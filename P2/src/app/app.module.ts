@@ -11,6 +11,8 @@ import { CommentComponent } from './components/comment/comment.component';
 import { RegistrationFormComponent } from './components/registration-form/registration-form.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { RestaurantsComponent } from './components/restaurants/restaurants.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { FormsModule } from '@angular/forms';
     LogoutComponent,
     HeaderComponent,
     CommentComponent,
-    RegistrationFormComponent
+    RegistrationFormComponent,
+    RestaurantsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

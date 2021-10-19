@@ -3,7 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 import { AuthenticationService } from 'src/app/services/authentication.service';
-import { SignInData, SignInData } from 'src/app/model/signInData';
+import { SignInData } from 'src/app/model/signInData';
 
 
 @Component({

@@ -1,4 +1,4 @@
-export class Comments{
+export class Comment{
     
     private comment_id:number;
     private comment_header: string;
