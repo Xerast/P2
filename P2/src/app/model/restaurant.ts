@@ -11,6 +11,17 @@ export class Restaurant{
         this.restLocation = restLocation;
         this.resLink = resLink;
     }
+    setName(name:string){
+        this.rest_name = name;
+    }
+
+    setLocation(location:string){
+        this.restLocation = location;
+    }
+
+    setLink(link:string){
+        this.resLink = link;
+    }
 
     getName():string{
         return this.rest_name;
