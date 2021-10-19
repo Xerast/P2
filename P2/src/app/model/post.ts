@@ -31,11 +31,11 @@ export class Post{
         return this.body;
     }
 
-    getRes_name(): string{
+    getName(): string{
         return this.res_url;
     }
 
-    getRest_id(){
+    getRestId(){
         return this.rest_id;
     }
 

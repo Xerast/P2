@@ -10,11 +10,11 @@ export class Comments{
         this.comment = comment;
     }
 
-    getCommentId():number{
+    getId():number{
         return this.comment_id;
     }
 
-    getCommentHead():string{
+    getHead():string{
         return this.comment_header;
     }
 
