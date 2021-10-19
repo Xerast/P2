@@ -10,6 +10,18 @@ export class Comment{
         this.comment = comment;
     }
 
+    setId(id:number){
+        this.comment_id = id;
+    }
+
+    setHead(head:string){
+        this.comment_header = head;
+    }
+
+    setComment(comment:string){
+        this.comment = comment;
+    }
+
     getId():number{
         return this.comment_id;
     }

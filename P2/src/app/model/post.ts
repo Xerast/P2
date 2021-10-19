@@ -18,6 +18,34 @@ export class Post{
         this.recommend = recommend;
         this.rating = rating;
     }
+    setId(id:number){
+        this.id = id;
+    }
+
+    setTitle(title:string){
+        this.title = title;
+    }
+
+    setBody(body:string){
+        this.body = body;
+    }
+
+    setUrl(url:string){
+        this.res_url = url;
+    }
+
+    setRestId(resid:number){
+        this.rest_id = resid;
+    }
+
+    setRecommend(recommend:boolean){
+        this.recommend = recommend;
+    }
+
+    setRating(rating:number){
+        this.rating = rating;
+    }
+
 
     getId(): number{
         return this.id;
