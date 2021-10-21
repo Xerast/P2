@@ -18,6 +18,7 @@ export class Post{
         this.recommend = recommend;
         this.rating = rating;
     }
+
     setId(id:number){
         this.id = id;
     }

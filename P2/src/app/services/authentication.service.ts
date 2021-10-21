@@ -12,7 +12,7 @@ export class AuthenticationService {
 
   isAuthenticated = false;
 
-  private baseUrl: string = "http://localhost:8080/login";
+  private baseUrl: string = "http://localhost:8080/foodgram/login";
 
   headers = new HttpHeaders().set('content-type', 'application/json')
   .set('Access-Control-Allow-Origin', '*')
@@ -20,6 +20,7 @@ export class AuthenticationService {
   constructor(private http: HttpClient) { }
 
   authenticate(signInData: SignInData): Observable<any>{
+    console.log("inside the authenticate service");
       return this.http.post(
         this.baseUrl,
         JSON.stringify(signInData),

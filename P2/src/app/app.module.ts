@@ -25,8 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
 const routes: Routes = [
   {path: 'new-post-button', component: NewPostButtonComponent},
   {path: '', redirectTo: 'new-post-button', pathMatch: 'full'},
-  {path: 'post', component: PostComponent},
-  {path: '', redirectTo: 'post', pathMatch: 'full'}
+  {path: 'post-form', component: PostFormComponent},
+  {path: 'post-form', redirectTo: 'post-form', pathMatch: 'full'}
   
 ];
 
