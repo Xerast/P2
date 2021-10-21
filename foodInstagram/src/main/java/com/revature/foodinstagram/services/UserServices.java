@@ -8,6 +8,7 @@ import sun.plugin.dom.exception.InvalidAccessException;
 
 import javax.transaction.Transactional;
 import java.util.HashSet;
+import java.util.Objects;
 
 @Service
 public class UserServices {
@@ -23,7 +24,7 @@ public class UserServices {
        User u =  userRepo.findByUsername(user.getUsername());
        String username = u.getUsername();
        String password = u.getPassword();
-       if(username == user.getUsername() && password == user.getPassword()){
+       if(Objects.equals(username, user.getUsername()) && Objects.equals(password, user.getPassword())){
            return true;
        }
        throw new InvalidAccessException("Invalid Credentials");

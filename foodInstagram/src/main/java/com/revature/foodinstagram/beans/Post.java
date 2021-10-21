@@ -3,7 +3,7 @@ package com.revature.foodinstagram.beans;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "posts", schema="Project-2")
+@Table(name = "posts", schema="Project2")
 public class Post {
 
     @Id

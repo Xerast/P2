@@ -32,7 +32,7 @@ public class PostController {
     }
 
 
-    @PostMapping(consumes = "application/json", produces = "application/json")
+    @PostMapping
     public void addPost(@RequestBody Post post) {
         postServices.addPost(post);
     }
