@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { SignInData } from '../model/signInData';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map, catchError } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
@@ -12,16 +12,17 @@ export class AuthenticationService {
 
   isAuthenticated = false;
 
-  private baseUrl: string = "/login";
+  private baseUrl: string = "http://localhost:8080/login";
 
-  private headers = {'Content-Type': 'application/json'}
+  headers = new HttpHeaders().set('content-type', 'application/json')
+  .set('Access-Control-Allow-Origin', '*')
 
   constructor(private http: HttpClient) { }
 
   authenticate(signInData: SignInData): Observable<any>{
       return this.http.post(
         this.baseUrl,
-        JSON.stringify(SignInData),
+        JSON.stringify(signInData),
           {
             headers: this.headers,
             withCredentials: true

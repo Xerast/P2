@@ -13,9 +13,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { RestaurantsComponent } from './components/restaurants/restaurants.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes} from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+
+// import { HttpModule } from '@angular/http';
+// import { MyserviceService } from './myservice.service';
+// import { NewCmpComponent } from './new-cmp/new-cmp.component';
+// import { ChangeTextDirective } from './change-text.directive';
+// import { SqrtPipe } from './app.sqrt';
 
 const routes: Routes = [
   {path: 'new-post-button', component: NewPostButtonComponent},
@@ -27,6 +32,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
+    // SqrtPipe,
     AppComponent,
     PostComponent,
     NewPostButtonComponent,
@@ -41,12 +47,13 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    // HttpModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  // providers: [MyserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

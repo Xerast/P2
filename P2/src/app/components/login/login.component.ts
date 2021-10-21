@@ -5,7 +5,6 @@ import { first } from 'rxjs/operators';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { SignInData } from 'src/app/model/signInData';
 
-
 @Component({
     selector: 'login',
     templateUrl: './login.component.html',
@@ -25,7 +24,12 @@ export class LoginComponent implements OnInit{
     onsubmit(signInForm: NgForm){
         console.log(signInForm.value);
         const signInData = new SignInData(signInForm.value.email, signInForm.value.password)
-        this.authenticactionService.authenticate(signInData);
-        
+        this.authenticactionService.authenticate(signInForm.value)
+            .subscribe(
+                resp => {
+                    console.log(resp)
+                },
+                error => console.log(error)
+            )
     }
 }
