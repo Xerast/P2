@@ -14,6 +14,17 @@ import { FormsModule } from '@angular/forms';
 import { RestaurantsComponent } from './components/restaurants/restaurants.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
+import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+
+const routes: Routes = [
+  {path: 'new-post-button', component: NewPostButtonComponent},
+  {path: '', redirectTo: 'new-post-button', pathMatch: 'full'},
+  {path: 'post', component: PostComponent},
+  {path: '', redirectTo: 'post', pathMatch: 'full'}
+  
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +42,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

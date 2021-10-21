@@ -36,16 +36,73 @@ div.stars {
     font-family: FontAwesome;
   }
 
-  h1{
+  h1.newPost{
       background-color: rgb(9, 109, 223);
       margin: 0;
-      font-size: 19px;
-    
+      font-size: 40px;
+      text-align: center;
       font-weight: bold;
       color: rgb(250, 249, 249);
+      border-radius: 12px;
   }
   
   label.rating{
       font-size: large;
       font-weight: bold;
+  }
+
+
+  .open-button {
+    background-color: #555;
+    color: white;
+    padding: 10px 1px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position:relative;
+    bottom: 10px;
+    right: 20px;
+    width: 200px;
+  }
+  .container{
+    filter: blur(5px);
+  }
+  /* The popup form - hidden by default */
+  .form-popup {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 500px;
+    box-shadow: rgb(3, 3, 3);
+    z-index: 9;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 300px;
+    padding: 5px;
+    background-color: rgba(116, 113, 113, 0.322);
+    border-radius: 8px;
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
   }

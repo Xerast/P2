@@ -16,15 +16,16 @@ export class LoginComponent implements OnInit{
     
     signInData: SignInData | any;
     
-    constructor(authenticactionService: AuthenticationService) { }
+    constructor(private authenticactionService: AuthenticationService) { }
 
-    ngOnInit() void {
+    ngOnInit()  {
 
     }
 
     onsubmit(signInForm: NgForm){
         console.log(signInForm.value);
-        const SignInData = new SignInData(signInForm.value.email, signInForm.value.password)
-        this.authenticactionService.authenticate(SignInData);
+        const signInData = new SignInData(signInForm.value.email, signInForm.value.password)
+        this.authenticactionService.authenticate(signInData);
+        
     }
 }

@@ -8,7 +8,8 @@
     <link rel="stylesheet" type="text/css" href="post-form.component.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    <link rel="shortcut icon" href="#" />
 </head>
 <body> 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -16,13 +17,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
-<body>
-    <form action="employeereimbursement" method="post" id='postForm'>
-        <center>
-            <h1> New Post</h1>
-        </center>
+  <!-- <button class="open-button" onclick="openForm()">Open Post Button</button> -->
+  <div class="container">
+<h1 > this is some text</h1>
+<br>
+<h1>some more text</h1>
+  </div>
+<body onload="openForm()">
+<div class="form-popup" id="myForm" onload="openForm()">
+    <form action="employeereimbursement" method="post" class="form-container">
+            <h1 class="newPost"> New Post</h1>
         <br>
-        <nav>
+        <!-- <nav>
             <ul>
                 <li>
                     <a href=welcomeEmp.html>Previous Page</a>
@@ -31,7 +37,7 @@
                     <a href=login.html onclick="logout()">Log out</a>
                 </li>
             </ul>
-        </nav><center>
+        </nav><center> -->
         <label for="title">
             Title of Post:
             <br>
@@ -84,11 +90,21 @@
               <label class="star star-1" for="star1"></label>
           </div>   
         <br>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" id="btn" class="btn btn-primary">Post</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
     <!-- <button type="submit" class="btn btn-sm btn-primary">Submit</button> -->
-</center>
 </form>
+</div>
 </body>
+<script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
 </html>
 
 <div class="container">
