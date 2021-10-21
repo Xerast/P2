@@ -20,13 +20,19 @@ public class UserServices {
     }
 
     public Boolean getByUsername(User user){
+        System.out.println(user);
         User u =  userRepo.findByUsername(user.getUsername());
         String username = u.getUsername();
         String password = u.getPassword();
-        if(username == user.getUsername() && password == user.getPassword()){
+        System.out.println(username + " the username "+ password + " password |" +"after the user Repo " +u);
+        if(username.equals(user.getUsername()) && password.equals(user.getPassword())){
+            System.out.println("should be true");
             return true;
         }
-        throw new InvalidAccessException("Invalid Credentials");
+        else{
+            System.out.println("inside else");
+            throw new InvalidAccessException("Invalid Credentials");
+        }
     }
 
     public User addUser(User user) {return userRepo.save(user);}
