@@ -10,18 +10,18 @@ public class Comment implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "comment_id")
-    private int id;
+    private Integer id;
 
     @ManyToOne
     @JoinColumn(name = "comment_posterid")
-    private com.revature.foodinstagram.beans.User user;
+    private User user;
 
     private String comment_header;
     private String comment_body;
 
     @ManyToOne
     @JoinColumn(name = "ref_postid")
-    private com.revature.foodinstagram.beans.Post post;
+    private Post post;
 
     public Comment() {
     }

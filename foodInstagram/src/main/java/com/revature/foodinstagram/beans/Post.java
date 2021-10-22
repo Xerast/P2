@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "posts")
+@Table(name = "posts", schema = "Project2")
 public class Post implements Serializable {
 
     @Id
@@ -14,39 +14,32 @@ public class Post implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "posterid")
-    private com.revature.foodinstagram.beans.User user;
+    private User user;
 
     private String title;
     private String body;
     private String image_url;
-
-    @ManyToOne
-    @JoinColumn(name = "rec_rest_id")
-    private com.revature.foodinstagram.beans.Restaurant restaurant;
-
     private Boolean recommend_rest;
     private Integer rating;
 
     public Post() {
     }
 
-    public Post(User user, String title, String body, String image_url, Restaurant restaurant, Boolean recommend_rest, Integer rating) {
+    public Post(User user, String title, String body, String image_url, Boolean recommend_rest, Integer rating) {
         this.user = user;
         this.title = title;
         this.body = body;
         this.image_url = image_url;
-        this.restaurant = restaurant;
         this.recommend_rest = recommend_rest;
         this.rating = rating;
     }
 
-    public Post(int id, User user, String title, String body, String image_url, Restaurant restaurant, Boolean recommend_rest, Integer rating) {
+    public Post(Integer id, User user, String title, String body, String image_url, Boolean recommend_rest, Integer rating) {
         this.id = id;
         this.user = user;
         this.title = title;
         this.body = body;
         this.image_url = image_url;
-        this.restaurant = restaurant;
         this.recommend_rest = recommend_rest;
         this.rating = rating;
     }
@@ -91,15 +84,7 @@ public class Post implements Serializable {
         this.image_url = image_url;
     }
 
-    public Restaurant getRestaurant() {
-        return restaurant;
-    }
-
-    public void setRestaurant(Restaurant restaurant) {
-        this.restaurant = restaurant;
-    }
-
-    public Boolean isRecommend_rest() {
+    public Boolean getRecommend_rest() {
         return recommend_rest;
     }
 
@@ -123,10 +108,8 @@ public class Post implements Serializable {
                 ", title='" + title + '\'' +
                 ", body='" + body + '\'' +
                 ", image_url='" + image_url + '\'' +
-                ", restaurant=" + restaurant +
                 ", recommend_rest=" + recommend_rest +
                 ", rating=" + rating +
                 '}';
     }
-
 }
