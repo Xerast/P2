@@ -1,7 +1,6 @@
 package com.revature.foodinstagram.controllers;
 
 import com.revature.foodinstagram.beans.User;
-import com.revature.foodinstagram.repositories.UserRepo;
 import com.revature.foodinstagram.services.UserServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
