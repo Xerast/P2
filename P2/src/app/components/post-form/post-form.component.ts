@@ -26,7 +26,9 @@ export class PostFormComponent implements OnInit {
 
   onsubmit(newPost : NgForm){
     console.log(newPost.value);
-    const postData = new Post(newPost.value.id,newPost.value.title, newPost.value.body, newPost.value.res_url, newPost.value.rest_id, newPost.value.recommend, newPost.value.rating);
+    var idRest: number;
+    idRest = 1;
+    const postData = new Post(idRest,newPost.value.title, newPost.value.postImage, newPost.value.recommend, newPost.value.stars);
     
   }
 
