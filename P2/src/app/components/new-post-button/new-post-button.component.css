@@ -1,0 +1,50 @@
+    button.btn {
+    border-radius: 8px;
+    border-style:none;
+    width: 130px;
+    height: 35px;
+    padding-bottom: 40px;
+    padding-left: none;
+    padding-right: none;
+    background-color: rgb(14, 159, 226);
+    color:white;
+    color: white;
+    font-size: 15px;
+    align-items: center;
+    }
+
+    button.btn::before {
+        /* content: "+ Create Post"; */
+        height:10px;
+        width:18px;
+        font-size:10px;
+        display:flex;
+        flex-direction:row;
+        /* align-items:center; */
+        /* justify-content:center; */
+        font-weight:bold;
+        font-family:courier;
+        color:white;
+        border-radius: 8px;
+    }
+/* 
+    button {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background-color: rgb(44, 44, 44)
+        }
+    
+        button::before {
+            content: "+";
+            height:10px;
+            width:18px;
+            font-size:30px;
+            display:flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+            font-weight:bold;
+            font-family:courier;
+            color:white;
+        } */

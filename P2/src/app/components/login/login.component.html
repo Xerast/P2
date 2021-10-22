@@ -1,0 +1,21 @@
+<div class="login-wrapper">
+    <div class="card">
+        <div class="card-body">
+        <form class="form-signin" (ngSubmit)="onsubmit(signInForm)" #signInForm="ngForm">
+            <img class="mb-4" src="https://th.bing.com/th/id/R.20707d4587faed0abadcf48e5b5476bb?rik=V8Rz4rXghw9Sog&riu=http%3a%2f%2fsmecastle.com%2fwp-content%2fuploads%2f2017%2f09%2fbusiness-wallpaper.jpg&ehk=1TjUHFCsp5YJWXS4uLS48VFfwdIDQvGuNBSSl69JSxs%3d&risl=&pid=ImgRaw&r=0" alt="" width="290" height="250">
+            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+            <div class="form-floating">
+                <input type="text" class="form-control" id="username" name="username" placeholder="name@example.com" ngModel>
+                <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Password" ngModel>
+                <label for="floatingPassword">Password</label>
+            </div>
+
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+        </form>
+        </div>
+    </div>
+</div>
