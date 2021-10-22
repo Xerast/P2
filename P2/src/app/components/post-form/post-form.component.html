@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>New Post</title>
     <link rel="stylesheet" type="text/css" href="post-form.component.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
     <link rel="shortcut icon" href="#" />
+    <title>New Post</title>
 </head>
 <body> 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -18,26 +18,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
   <!-- <button class="open-button" onclick="openForm()">Open Post Button</button> -->
-  <div class="container">
-<h1 > this is some text</h1>
-<br>
-<h1>some more text</h1>
-  </div>
-<body onload="openForm()">
 <div class="form-popup" id="myForm" onload="openForm()">
     <form class="form-container" (ngSubmit)="onsubmit(newPost)" #newPost="ngForm">
             <h1 class="newPost"> New Post</h1>
         <br>
-        <!-- <nav>
-            <ul>
-                <li>
-                    <a href=welcomeEmp.html>Previous Page</a>
-                </li>
-                <li>
-                    <a href=login.html onclick="logout()">Log out</a>
-                </li>
-            </ul>
-        </nav><center> -->
         <label for="title">
             Title of Post:
             <br>
@@ -94,21 +78,9 @@
         <a (click)="cancel()">
         <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
         </a>
-    <!-- <button type="submit" class="btn btn-sm btn-primary">Submit</button> -->
 </form>
 </div>
-</body>
-<script>
-    function openForm(){
-      document.getElementById("myForm").style.display = "block";
-    }
-    
-    function closeForm(){
-      document.getElementById("myForm").style.display = "none";
-    }
-    </script>
 </html>
-
 <div class="container">
     <router-outlet></router-outlet>
 </div>

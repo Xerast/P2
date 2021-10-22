@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="new-post-button.component.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
     <link rel="shortcut icon" href="#" />
 </head>
 <body> 
@@ -17,11 +18,66 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 <body>
-    <a (click)="newPost()">
-        <button type="button" class="btn" id="new-Post" >+ Create Post
-            
-        </button>
-    </a>
-    <!-- <button type="submit" class="btn btn-sm btn-primary">Submit</button> -->
+        <button type="button" class="btn" id="new-Post" (click)="newPost()">+ Create Post</button>
+    <div class="form-popup" id="myForm">
+        <form class="form-container" (ngSubmit)="onsubmit(Post)" #Post="ngForm">
+                <h1 class="newPost"> New Post</h1>
+            <br>
+            <label for="title">
+                Title of Post:
+                <br>
+                <input id="title" type="text"  name="title" placeholder="Title" ngModel>
+            </label><br>    
+            <label for="postImage">
+                Upload Photo:
+                <br>
+                <input accept="image/*" type="file" id="postImage" ngModel>
+                <!-- <img id="postImage" type="file"  name="postImage"> -->
+            </label><br>
+            <label for="review">
+                Review:
+                <input id="review" type="text"  name="review" maxlength="150" placeholder="Max-Length 150" ngModel>
+            </label><br>
+            <label for="restName">
+                Restaurant Name:</label>
+                <select name="restName" id="restName" ngModel>
+                    <option value = "0" > Select Option
+                    </option>
+                    <option value = "1" > Popeyes
+                    </option>
+                    <option value = "2" > Bk Training
+                    </option>
+                    <option value = "3" > Mcdonalds Courses
+                    </option>
+                    <option value = "4" > Rudy's Preparation Classes
+                    </option>
+                    <option value = "5"> Jack
+                    </option>
+                    <option value = "6" > Other
+                    </option>
+                </select>
+            <br>
+            <label for="recommend">Recommend:</label>
+            <input type="checkbox" id="recommend" value="true" ngModel>
+            <br>
+            <label class="rating" id= "rating" for="stars">Rating:</label>
+            <br>
+            <div class="stars" ngModel>
+                  <input class="star star-5" id="star5" type="radio" name="star"/>
+                  <label class="star star-5" for="star5"></label>
+                  <input class="star star-4" id="star4" type="radio" name="star"/>
+                  <label class="star star-4" for="star4"></label>
+                  <input class="star star-3" id="star3" type="radio" name="star"/>
+                  <label class="star star-3" for="star3"></label>
+                  <input class="star star-2" id="star2" type="radio" name="star"/>
+                  <label class="star star-2" for="star2"></label>
+                  <input class="star star-1" id="star1" type="radio" name="star"/>
+                  <label class="star star-1" for="star1"></label>
+              </div>   
+            <br>
+            <button type="submit" id="btn" class="btn btn-primary">Post</button>
+            <button type="button" class="btn cancel" (click)="cancel()">Cancel</button>
+    </form>
+    </div>
 </body>
 </html>
