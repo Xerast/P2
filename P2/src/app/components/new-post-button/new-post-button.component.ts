@@ -35,7 +35,7 @@ export class NewPostButtonComponent implements OnInit {
     console.log(newPost.value);
     var idRest: number;
     idRest = 1;
-    const postData = new Post(idRest,newPost.value.title, newPost.value.postImage, newPost.value.res_url, newPost.value.restId, newPost.value.recommend, newPost.value.stars);
+    const postData = new Post(idRest,newPost.value.title, newPost.value.postImage, newPost.value.recommend, newPost.value.stars);
     console.log(postData);
   }
 
