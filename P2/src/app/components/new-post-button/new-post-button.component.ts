@@ -32,10 +32,10 @@ export class NewPostButtonComponent implements OnInit {
   }
 
   onsubmit(newPost : NgForm){
-    console.log(newPost.value);
     var idRest: number;
     idRest = 1;
-    const postData = new Post(idRest,newPost.value.title, newPost.value.postImage, newPost.value.recommend, newPost.value.stars);
+    var selected = document.querySelector('input[name="star"]:checked')!.id;
+    const postData = new Post(idRest,newPost.value.title, newPost.value.postImage, newPost.value.recommend, selected);
     console.log(postData);
   }
 

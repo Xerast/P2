@@ -6,10 +6,10 @@ export class Post{
     // private res_url: string;
     // private rest_id: number;
     private recommend: boolean;
-    private rating: number;
+    private rating: string;
 
 
-    constructor(id: number, title:string, body:string, recommend:boolean, rating:number){
+    constructor(id: number, title:string, body:string, recommend:boolean, rating:string){
         this.id = id;
         this.title = title;
         this.body = body;
@@ -43,7 +43,7 @@ export class Post{
         this.recommend = recommend;
     }
 
-    setRating(rating:number){
+    setRating(rating:string){
         this.rating = rating;
     }
 
