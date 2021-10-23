@@ -33,7 +33,7 @@ public class Comment implements Serializable {
         this.post = post;
     }
 
-    public Comment(int id, User user, String comment_header, String comment_body, Post post) {
+    public Comment(Integer id, User user, String comment_header, String comment_body, Post post) {
         this.id = id;
         this.user = user;
         this.comment_header = comment_header;
@@ -41,11 +41,11 @@ public class Comment implements Serializable {
         this.post = post;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
