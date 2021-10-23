@@ -24,13 +24,13 @@ public class UserServices {
         User u =  userRepo.findByUsername(user.getUsername());
         String username = u.getUsername();
         String password = u.getPassword();
-        System.out.println(username + " the username "+ password + " password |" +"after the user Repo " +u);
+        System.out.println(username + " the username "+ password + " password |" +"after the user Repo " + u);
         if(username.equals(user.getUsername()) && password.equals(user.getPassword())){
             System.out.println("should be true");
             return true;
         }
         else{
-            System.out.println("inside else");
+            System.out.println("Invalid Credendtials");
             throw new InvalidAccessException("Invalid Credentials");
         }
     }
