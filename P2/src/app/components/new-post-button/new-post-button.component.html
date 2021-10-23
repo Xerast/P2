@@ -38,6 +38,7 @@
                 Review:
                 <input id="review" type="text"  name="review" maxlength="150" placeholder="Max-Length 150" ngModel>
             </label><br>
+            
             <label for="restName">
                 Restaurant Name:</label>
                 <select name="restId" id="restId" ngModel>
@@ -57,24 +58,27 @@
                     </option>
                 </select>
             <br>
+
             <label for="restUrl">Restaurant Link:</label>
             <input type="text" id="restUrl" name="restUrl" placeholder="Link to Restaurant (Optional)" ngModel>
+
             <label for="recommend">Recommend:</label>
             <input type="checkbox" id="recommend" value="true" name="recommend" ngModel>
             <br>
+
             <label class="rating" id= "rating" for="stars">Rating:</label>
             <br>
             <div class="stars" ngModel>
-                  <input class="star star-5" id="star5" type="radio" name="star"/>
-                  <label class="star star-5" for="star5"></label>
-                  <input class="star star-4" id="star4" type="radio" name="star"/>
-                  <label class="star star-4" for="star4"></label>
-                  <input class="star star-3" id="star3" type="radio" name="star"/>
-                  <label class="star star-3" for="star3"></label>
-                  <input class="star star-2" id="star2" type="radio" name="star"/>
-                  <label class="star star-2" for="star2"></label>
-                  <input class="star star-1" id="star1" type="radio" name="star"/>
-                  <label class="star star-1" for="star1"></label>
+                  <input class="star star-5" id="5" type="radio" name="star"/>
+                  <label class="star star-5" for="5"></label>
+                  <input class="star star-4" id="4" type="radio" name="star"/>
+                  <label class="star star-4" for="4"></label>
+                  <input class="star star-3" id="3" type="radio" name="star"/>
+                  <label class="star star-3" for="3"></label>
+                  <input class="star star-2" id="2" type="radio" name="star"/>
+                  <label class="star star-2" for="2"></label>
+                  <input class="star star-1" id="1" type="radio" name="star"/>
+                  <label class="star star-1" for="1"></label>
               </div>   
             <br>
             <button type="submit" id="btn" class="btn btn-primary">Post</button>
