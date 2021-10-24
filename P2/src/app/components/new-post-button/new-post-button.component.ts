@@ -34,7 +34,6 @@ export class NewPostButtonComponent implements OnInit {
 
   addPost(input : any){
     console.log(input)
-    console.log(input.review);
     this.postService.addPost(input)
       .subscribe(
         res => {
@@ -44,8 +43,8 @@ export class NewPostButtonComponent implements OnInit {
       )
   }
 
-  onsubmit(data: Post){
-    console.log(data.body);
+  onsubmit(data: NgForm){
+    console.log(data.value.review);
   }
   
 
