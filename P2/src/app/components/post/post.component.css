@@ -1,6 +1,10 @@
 body{ 
    background-color: rgb(40, 4, 65);
 }
+.header{
+    text-align: center;
+    background-color: white;
+}
 .post-button{
     position: fixed;
     bottom: 0;

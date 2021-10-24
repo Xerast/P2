@@ -13,7 +13,7 @@ export class RegistrationFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addUser{
-
+  addUser(){
+    
   }
 }

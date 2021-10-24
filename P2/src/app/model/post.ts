@@ -7,7 +7,8 @@ export interface Post{
      title: string;
      body: string;
      image_url: string;
-     recommend_rest: boolean;
-     rating: number;
+     recommend_rest: boolean ;
+     rating: string;
+     
 
 }

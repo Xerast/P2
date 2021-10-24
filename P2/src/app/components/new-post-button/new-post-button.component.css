@@ -15,6 +15,7 @@
 
     button.btn::before {
         /* content: "+ Create Post"; */
+        background-color: rgb(40, 4, 65);
         height:10px;
         width:18px;
         font-size:10px;
@@ -100,6 +101,7 @@
   label.rating{
       font-size: large;
       font-weight: bold;
+      color: white
   }
 
 
@@ -120,10 +122,12 @@
   .form-popup {
     display: none;
     position: fixed;
-    bottom: 10px;
+    bottom: 80px;
     right: 500px;
     box-shadow: rgb(3, 3, 3);
     z-index: 9;
+    color: white;
+    
   }
   .container{
     filter: blur(5px);
@@ -132,7 +136,7 @@
   .form-container {
     max-width: 300px;
     padding: 5px;
-    background-color: rgb(116, 113, 113);
+    background-color: rgba(44, 43, 43, 0.836);
     border-radius: 8px;
   }
   
@@ -140,7 +144,7 @@
   .form-container .btn {
     background-color: #04AA6D;
     color: white;
-    padding: 16px 20px;
+    padding: 0;
     border: none;
     cursor: pointer;
     width: 100%;
@@ -155,5 +159,5 @@
   
   /* Add some hover effects to buttons */
   .form-container .btn:hover, .open-button:hover {
-    opacity: 10\;
+    opacity: 10;
   }

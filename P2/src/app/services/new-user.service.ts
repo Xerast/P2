@@ -7,7 +7,7 @@ export class NewUserService {
 
   constructor() { }
 
-  addUser{
+  addUser(){
 
   }
 }

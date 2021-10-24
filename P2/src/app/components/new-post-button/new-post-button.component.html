@@ -40,11 +40,11 @@
             </label><br>
             <br>
             <label for="recommend">Recommend:</label>
-            <input type="checkbox" id="recommend" value="true" #recommend>
+            <input type="checkbox" id="recommend" value="false" #recommend>
             <br>
             <label class="rating" id= "rating" for="stars">Rating:</label>
             <br>
-            <div class="stars" #stars name="stars">
+            <div class="stars" name="stars" #stars>
                   <input class="star star-5" id="5" type="radio" name="star" value="5" />
                   <label class="star star-5" for="5"></label>
                   <input class="star star-4" id="4" type="radio" name="star" value="4" />
@@ -59,7 +59,7 @@
             <br>
             <button type="submit" id="btn" class="btn btn-primary"
                 (click)="addPost({title: title.value, body: review.value, image_url: image.value,
-                 recommend_rest: recommend.value, rating: stars.id})">
+                 recommend_rest: recommend.value, rating: star.value})">
                 Post
             </button>
             
