@@ -44,22 +44,22 @@
             <br>
             <label class="rating" id= "rating" for="stars">Rating:</label>
             <br>
-            <div class="stars" #stars>
-                  <input class="star star-5" id="star5" type="radio" name="star" value="5"/>
-                  <label class="star star-5" for="star5"></label>
-                  <input class="star star-4" id="star4" type="radio" name="star" value="4"/>
-                  <label class="star star-4" for="star4"></label>
-                  <input class="star star-3" id="star3" type="radio" name="star" value="3"/>
-                  <label class="star star-3" for="star3"></label>
-                  <input class="star star-2" id="star2" type="radio" name="star" value="2"/>
-                  <label class="star star-2" for="star2"></label>
-                  <input class="star star-1" id="star1" type="radio" name="star" value="1"/>
-                  <label class="star star-1" for="star1"></label>
+            <div class="stars" #stars name="stars">
+                  <input class="star star-5" id="5" type="radio" name="star" value="5" />
+                  <label class="star star-5" for="5"></label>
+                  <input class="star star-4" id="4" type="radio" name="star" value="4" />
+                  <label class="star star-4" for="4"></label>
+                  <input class="star star-3" id="3" type="radio" name="star" value="3" />
+                  <label class="star star-3" for="3"></label>
+                  <input class="star star-2" id="2" type="radio" name="star" value="2" />
+                  <label class="star star-2" for="2"></label>
+                  <input class="star star-1" id="1" type="radio" name="star" value="1" />
+                  <label class="star star-1" for="1"></label>
               </div>   
             <br>
             <button type="submit" id="btn" class="btn btn-primary"
                 (click)="addPost({title: title.value, body: review.value, image_url: image.value,
-                 recommend_rest: recommend.value, rating: stars.value})">
+                 recommend_rest: recommend.value, rating: stars.id})">
                 Post
             </button>
             

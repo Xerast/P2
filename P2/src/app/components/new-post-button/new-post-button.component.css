@@ -132,7 +132,7 @@
   .form-container {
     max-width: 300px;
     padding: 5px;
-    background-color: rgba(116, 113, 113, 0.322);
+    background-color: rgb(116, 113, 113);
     border-radius: 8px;
   }
   

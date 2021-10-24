@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NewUserService } from 'src/app/services/new-user.service';
 
 @Component({
   selector: 'app-registration-form',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrationFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService: NewUserService) { }
 
   ngOnInit(): void {
   }
 
+  addUser{
+
+  }
 }
