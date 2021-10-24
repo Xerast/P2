@@ -36,7 +36,7 @@
             </label><br>
             <label for="review">
                 Review:
-                <input id="review" type="text"  name="review" maxlength="150" placeholder="Max-Length 150" #review>
+                <input id="review" type="text"  name="review" maxlength="150" placeholder="Max-Length 150" #review ngForm>
             </label><br>
             <br>
             <label for="recommend">Recommend:</label>
@@ -59,7 +59,7 @@
             <br>
             <button type="submit" id="btn" class="btn btn-primary"
                 (click)="addPost({title: title.value, body: review.value, image_url: image.value,
-                 recommend_rest: recommend.value, rating: star.value})">
+                    recommend_rest: recommend.value, rating: stars.id })">
                 Post
             </button>
             

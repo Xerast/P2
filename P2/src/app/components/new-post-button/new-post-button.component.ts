@@ -34,6 +34,7 @@ export class NewPostButtonComponent implements OnInit {
 
   addPost(input : any){
     console.log(input)
+    console.log(input.review);
     this.postService.addPost(input)
       .subscribe(
         res => {
@@ -43,6 +44,8 @@ export class NewPostButtonComponent implements OnInit {
       )
   }
   
+
+
   cancel(){
     closeForm();
   }
