@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {Post} from 'src/app/model/post';
-import {CreatePostService} from 'src/app/services/create-post.service'
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { PostService } from 'src/app/services/post.service';
 
 
 function openForm(){
@@ -22,7 +22,8 @@ function closeForm(){
 export class NewPostButtonComponent implements OnInit {
   postData : Post | any;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+    private postService: PostService) { }
 
   ngOnInit(): void{
   }
@@ -31,12 +32,14 @@ export class NewPostButtonComponent implements OnInit {
     openForm();
   }
 
-  onsubmit(newPost : NgForm){
-    var idRest: number;
-    idRest = 1;
-    var selected = document.querySelector('input[name="star"]:checked')!.id;
-    const postData = new Post(idRest,newPost.value.title, newPost.value.postImage, newPost.value.recommend, selected);
-    console.log(postData);
+  addPost(input : any){
+    this.postService.addPost(input)
+      .subscribe(
+        res => {
+          console.log(res)
+        },
+        err => console.log(err)
+      )
   }
 
   cancel(){

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {Post} from 'src/app/model/post';
-import {CreatePostService} from 'src/app/services/create-post.service'
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { PostService } from 'src/app/services/post.service';
 
 
 function openForm(){
@@ -18,18 +18,20 @@ export class PostFormComponent implements OnInit {
 
   postData : Post | any;
 
-  constructor(private postService: CreatePostService, private route: Router) { }
+  constructor(private postService: PostService, private route: Router) { }
 
   ngOnInit() {
     openForm();
   }
 
-  onsubmit(newPost : NgForm){
-    console.log(newPost.value);
-    var idRest: number;
-    idRest = 1;
-    const postData = new Post(idRest,newPost.value.title, newPost.value.postImage, newPost.value.recommend, newPost.value.stars);
-    
+  addPost(input : any){
+    this.postService.addPost(input)
+      .subscribe(
+        res => {
+          console.log(res)
+        },
+        err => console.log(err)
+      )
   }
 
   cancel(){
