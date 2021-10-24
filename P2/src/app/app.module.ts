@@ -28,7 +28,9 @@ const routes: Routes = [
   {path: 'post-form', component: PostFormComponent},
   {path: 'post-form', redirectTo: 'post-form', pathMatch: 'full'},
   {path: 'post', component: PostComponent},
-  {path: 'post', redirectTo: 'post', pathMatch: 'full'}
+  {path: 'post', redirectTo: 'post', pathMatch: 'full'},
+  {path: 'register', component: RegistrationFormComponent},
+  {path: 'register', redirectTo: 'register', pathMatch: 'full'}
 ];
 
 @NgModule({
