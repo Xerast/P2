@@ -109,7 +109,7 @@
     padding: 10px 1px;
     border: none;
     cursor: pointer;
-    opacity: 0.8;
+    opacity: 1;
     position:relative;
     bottom: 10px;
     right: 20px;
@@ -145,7 +145,7 @@
     cursor: pointer;
     width: 100%;
     margin-bottom:10px;
-    opacity: 0.8;
+    opacity: 1;
   }
   
   /* Add a red background color to the cancel button */
@@ -155,5 +155,5 @@
   
   /* Add some hover effects to buttons */
   .form-container .btn:hover, .open-button:hover {
-    opacity: 1;
+    opacity: 10\;
   }

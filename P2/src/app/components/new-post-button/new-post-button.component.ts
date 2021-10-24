@@ -33,6 +33,7 @@ export class NewPostButtonComponent implements OnInit {
   }
 
   addPost(input : any){
+    console.log(input)
     this.postService.addPost(input)
       .subscribe(
         res => {
