@@ -42,7 +42,7 @@ export class NewPostButtonComponent implements OnInit {
         err => console.log(err)
       )
   }
-
+  
   cancel(){
     closeForm();
   }
