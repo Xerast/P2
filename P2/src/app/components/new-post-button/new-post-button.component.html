@@ -20,7 +20,7 @@
 <body>
         <button type="button" class="btn" id="new-Post" (click)="newPost()">+ Create Post</button>
     <div class="form-popup" id="myForm">
-        <form class="form-container" #Post="ngForm">
+        <form class="form-container" (ngSubmit)="onsubmit(Post)" #Post="ngForm">
                 <h1 class="newPost"> New Post</h1>
             <br>
             <label for="title">
@@ -36,7 +36,7 @@
             </label><br>
             <label for="review">
                 Review:
-                <input id="review" type="text"  name="review" maxlength="150" placeholder="Max-Length 150" #review ngForm>
+                <input id="review" type="text"  name="review" maxlength="150" placeholder="Max-Length 150" #review ngModel>
             </label><br>
             <br>
             <label for="recommend">Recommend:</label>

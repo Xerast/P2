@@ -43,6 +43,10 @@ export class NewPostButtonComponent implements OnInit {
         err => console.log(err)
       )
   }
+
+  onsubmit(data: Post){
+    console.log(data.body);
+  }
   
 
 
