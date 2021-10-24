@@ -20,68 +20,49 @@
 <body>
         <button type="button" class="btn" id="new-Post" (click)="newPost()">+ Create Post</button>
     <div class="form-popup" id="myForm">
-        <form class="form-container" (ngSubmit)="onsubmit(Post)" #Post="ngForm">
+        <form class="form-container" #Post="ngForm">
                 <h1 class="newPost"> New Post</h1>
             <br>
             <label for="title">
                 Title of Post:
                 <br>
-                <input id="title" type="text"  name="title" placeholder="Title" ngModel>
+                <input id="title" type="text"  name="title" placeholder="Title" #title>
             </label><br>    
             <label for="postImage">
                 Upload Photo:
                 <br>
-                <input accept="image/*" type="file" id="postImage" name="postImage" ngModel>
+                <input accept="image/*" type="file" id="postImage" #image>
                 <!-- <img id="postImage" type="file"  name="postImage"> -->
             </label><br>
             <label for="review">
                 Review:
-                <input id="review" type="text"  name="review" maxlength="150" placeholder="Max-Length 150" ngModel>
+                <input id="review" type="text"  name="review" maxlength="150" placeholder="Max-Length 150" #review>
             </label><br>
-            
-            <label for="restName">
-                Restaurant Name:</label>
-                <select name="restId" id="restId" ngModel>
-                    <option value=0> Select Option
-                    </option>
-                    <option value = "1" > Popeyes
-                    </option>
-                    <option value = "2" > Bk Training
-                    </option>
-                    <option value = "3" > Mcdonalds Courses
-                    </option>
-                    <option value = "4" > Rudy's Preparation Classes
-                    </option>
-                    <option value = "5"> Jack
-                    </option>
-                    <option value = "6" > Other
-                    </option>
-                </select>
             <br>
-
-            <label for="restUrl">Restaurant Link:</label>
-            <input type="text" id="restUrl" name="restUrl" placeholder="Link to Restaurant (Optional)" ngModel>
-
             <label for="recommend">Recommend:</label>
-            <input type="checkbox" id="recommend" value="true" name="recommend" ngModel>
+            <input type="checkbox" id="recommend" value="true" #recommend>
             <br>
-
             <label class="rating" id= "rating" for="stars">Rating:</label>
             <br>
-            <div class="stars" ngModel>
-                  <input class="star star-5" id="5" type="radio" name="star"/>
+            <div class="stars" #stars name="stars">
+                  <input class="star star-5" id="5" type="radio" name="star" value="5" />
                   <label class="star star-5" for="5"></label>
-                  <input class="star star-4" id="4" type="radio" name="star"/>
+                  <input class="star star-4" id="4" type="radio" name="star" value="4" />
                   <label class="star star-4" for="4"></label>
-                  <input class="star star-3" id="3" type="radio" name="star"/>
+                  <input class="star star-3" id="3" type="radio" name="star" value="3" />
                   <label class="star star-3" for="3"></label>
-                  <input class="star star-2" id="2" type="radio" name="star"/>
+                  <input class="star star-2" id="2" type="radio" name="star" value="2" />
                   <label class="star star-2" for="2"></label>
-                  <input class="star star-1" id="1" type="radio" name="star"/>
+                  <input class="star star-1" id="1" type="radio" name="star" value="1" />
                   <label class="star star-1" for="1"></label>
               </div>   
             <br>
-            <button type="submit" id="btn" class="btn btn-primary">Post</button>
+            <button type="submit" id="btn" class="btn btn-primary"
+                (click)="addPost({title: title.value, body: review.value, image_url: image.value,
+                 recommend_rest: recommend.value, rating: stars.id})">
+                Post
+            </button>
+            
             <button type="button" class="btn cancel" (click)="cancel()">Cancel</button>
     </form>
     </div>
