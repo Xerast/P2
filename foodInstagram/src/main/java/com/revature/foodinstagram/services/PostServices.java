@@ -33,9 +33,6 @@ public class PostServices {
 
     public List<Post> getAllPosts() {
 
-<<<<<<< HEAD
-        return postRepo.findAll();
-=======
         List<Post> post = postRepo.findAll();
         System.out.println(post);
         List<Comment> comments = commentRepo.findAll();
@@ -47,19 +44,16 @@ public class PostServices {
             for(int j = 0; j < cLength; j++){
                 Comment c = comments.get(j);
                 if( p.getId() == c.getPostId()){
-
                     p.setComment(comments);
-
                     List<Comment> com = p.getComment();
                     com.add(c);
                     p.setComment(com);
-
                 }
             }
         }
 
         return post;
->>>>>>> main
+
     }
 
     public Post getPostById(Integer id){
