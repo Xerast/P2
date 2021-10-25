@@ -43,12 +43,9 @@ export class NewPostButtonComponent implements OnInit {
       )
   }
 
-  onsubmit(data: NgForm){
-    console.log(data.value.review);
-  }
-  
-
-
+  // onsubmit(data: NgForm){
+  //   console.log(data.value.review);
+  // }
   cancel(){
     closeForm();
   }
