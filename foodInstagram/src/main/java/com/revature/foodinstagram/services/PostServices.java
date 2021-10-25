@@ -1,5 +1,6 @@
 package com.revature.foodinstagram.services;
 
+import com.revature.foodinstagram.beans.Comment;
 import com.revature.foodinstagram.beans.Post;
 import com.revature.foodinstagram.repositories.CommentRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +33,25 @@ public class PostServices {
 
     public List<Post> getAllPosts() {
 
+<<<<<<< HEAD
         return postRepo.findAll();
+=======
+        List<Post> post = postRepo.findAll();
+        List<Comment> comments = commentRepo.findAll();
+        int length = post.size() + 1;
+        int cLength = comments.size()+1;
+        for(int i = 1; i < length; i++){
+            Post p = post.get(i);
+            for(int j = 1; j < cLength; j++){
+                Comment c = comments.get(j);
+                if( p.getId() == c.getPostId()){
+                    p.setComment(c);
+                }
+            }
+        }
+
+        return post;
+>>>>>>> main
     }
 
     public Post getPostById(Integer id){

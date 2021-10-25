@@ -18,6 +18,9 @@
                 <div class="rec">Recommended: {{ post.recommend_rest }}</div>
                 <div class="rating">Rating of: {{ post.rating }}</div>
             </div> 
+            <div>
+                <button type="button" class="btn" id="comment" (click)="gotoComment()">Comment</button> 
+           </div>
         </div>
     </div>
 </div>
@@ -27,5 +30,3 @@
 <div class="post-button">
 <app-new-post-button></app-new-post-button>
 </div>
-
-

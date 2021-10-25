@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Post } from 'src/app/model/post';
 import { PostService } from 'src/app/services/post.service';
 
@@ -7,12 +8,13 @@ import { PostService } from 'src/app/services/post.service';
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css']
 })
+
 export class PostComponent implements OnInit {
 
   posts: Post[] = [];
 
   food = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/12/unhealthiest-foods-planet.jpg"
-  constructor(private postService: PostService) { }
+  constructor(private postService: PostService, private router: Router) { }
 
   ngOnInit(): void {
     this.getPosts();
@@ -30,6 +32,10 @@ export class PostComponent implements OnInit {
         err => console.log(err)
       )
     
+  }
+
+  gotoComment(){
+    this.router.navigateByUrl(`/comment`)
   }
 
   
