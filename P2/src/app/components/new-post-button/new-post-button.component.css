@@ -13,15 +13,12 @@
     }
 
     button.btn::before {
-        /* content: "+ Create Post"; */
         background-color: rgb(40, 4, 65);
         height:10px;
         width:18px;
         font-size:10px;
         display:flex;
         flex-direction:row;
-        /* align-items:center; */
-        /* justify-content:center; */
         font-weight:bold;
         font-family:courier;
         color:white;
@@ -49,7 +46,7 @@
             color:white;
         } */
 
-        div.stars {
+  div.stars {
     width: 270px;
     display: inline-block;
   }
@@ -60,7 +57,7 @@
     float: right;
     padding: 10px;
     font-size: 36px;
-    color: #444;
+    color: rgb(252, 252, 252);
     transition: all .2s;
   }
    
