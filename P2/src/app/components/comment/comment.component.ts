@@ -26,7 +26,14 @@ export class CommentComponent implements OnInit {
     openForm();
   }
   addComment(input: any){
-
+    console.log(input)
+    this.commentService.addComment(input)
+      .subscribe(
+        res => {
+          console.log(res)
+        },
+        err => console.log(err)
+      )
   }
   cancel(){
     closeForm();

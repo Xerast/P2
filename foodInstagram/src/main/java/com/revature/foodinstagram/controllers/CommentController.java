@@ -16,7 +16,7 @@ import java.util.List;
 public class CommentController {
 
     private final CommentServices commentServices;
-    private final UserServices userServices
+    private final UserServices userServices;
 
     @Autowired
     public CommentController(CommentServices commentServices, UserServices userServices){
