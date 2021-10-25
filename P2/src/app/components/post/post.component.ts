@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Post } from 'src/app/model/post';
 import { PostService } from 'src/app/services/post.service';
 
+
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
@@ -32,9 +33,17 @@ export class PostComponent implements OnInit {
   }
 
   gotoComment(){
-    this.router.navigateByUrl(`/comment`)
+    // this.router.navigateByUrl(`/comment`)
+    document.getElementById("commentForm")!.style.display = "block";
+  }
+  
+  cancel(){
+    document.getElementById("commentForm")!.style.display = "none";
   }
 
+  addComment(input: any){
+    document.getElementById("commentForm")!.style.display = "none";
+  }
   
 
 }
