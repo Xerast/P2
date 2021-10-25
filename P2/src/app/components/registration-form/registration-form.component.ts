@@ -22,7 +22,7 @@ export class RegistrationFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
+  user = {username: "", password: ""}
 
   addUser(input : any){
     console.log(input)
