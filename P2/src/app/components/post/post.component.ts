@@ -17,6 +17,7 @@ export class PostComponent implements OnInit {
   posts: Post[] = [];
   comments: Comment[] = [];
 
+
   food = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/12/unhealthiest-foods-planet.jpg"
   constructor(private postService: PostService, private router: Router) { }
 
