@@ -18,15 +18,19 @@ body{
 
 }
 .card{
-    align-items: center;
+    align-items: right;
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: rgba(29, 58, 82, 0.274);
     
 }
 .title{
-    align-content: center;
+    text-align: center;
 }
+/* 
+.name{
+    text
+} */
 .image{
     height: 400px;
     width: 100%;

@@ -1,8 +1,9 @@
+<body>
 <app-navbar></app-navbar>
 <div class="container">
-    <div class="header">
+    <!-- <div class="header">
         <h1>FoodStagram</h1>
-    </div>
+    </div> -->
         <div class="posts" *ngFor="let post of posts">
             <div class="card">
             <div class="user-info">
@@ -16,7 +17,7 @@
                 <img class="image" src="{{ post.image_url }}">
                 <div class="body">Review: {{ post.body }}</div>
                 <div class="rec">Recommended: {{ post.recommend_rest }}</div>
-                <div class="rating">Rating of: {{ post.rating }}</div>
+                <div class="rating">{{ post.rating }} Stars</div>
             </div> 
             <div class="comments" *ngFor= "let comment of comments">
                 <div class="user-info">
