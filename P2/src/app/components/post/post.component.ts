@@ -11,6 +11,7 @@ export class PostComponent implements OnInit {
 
   posts: Post[] = [];
 
+  img : string = "assets/images/restaurantlikes.png";
 
   constructor(private postService: PostService) { }
 
@@ -18,6 +19,9 @@ export class PostComponent implements OnInit {
     this.getPosts();
   }
 
+  getImage(){
+    
+  }
   getPosts(){
     this.postService.getPosts()
       .subscribe(
