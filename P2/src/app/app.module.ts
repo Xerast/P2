@@ -23,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
 // import { SqrtPipe } from './app.sqrt';
 
 const routes: Routes = [
+  
   {path: 'new-post-button', component: NewPostButtonComponent},
   {path: '', redirectTo: 'new-post-button', pathMatch: 'full'},
   {path: 'post-form', component: PostFormComponent},

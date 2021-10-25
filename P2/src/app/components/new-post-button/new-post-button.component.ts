@@ -42,7 +42,13 @@ export class NewPostButtonComponent implements OnInit {
         err => console.log(err)
       )
   }
+
+  onsubmit(data: NgForm){
+    console.log(data.value.review);
+  }
   
+
+
   cancel(){
     closeForm();
   }
