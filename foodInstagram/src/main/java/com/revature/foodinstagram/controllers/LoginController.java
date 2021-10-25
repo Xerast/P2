@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.Cookie;
+
 @RestController
 @RequestMapping(path = "/login")
 public class LoginController {
@@ -19,7 +21,10 @@ public class LoginController {
     }
     @PostMapping
     public void login(@RequestBody User user){
-        userServices.getByUsername(user);
+        User u  = userServices.getByUsername(user);
+        int id = u.getId();
+        String cookieId = (String.valueOf(id));
+        Cookie cookie = new Cookie("id", cookieId);
     }
 
 }
