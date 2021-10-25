@@ -11,12 +11,7 @@ export class PostComponent implements OnInit {
 
   posts: Post[] = [];
 
-<<<<<<< HEAD
-  img : string = "assets/images/restaurantlikes.png";
-
-=======
   food = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/12/unhealthiest-foods-planet.jpg"
->>>>>>> main
   constructor(private postService: PostService) { }
 
   ngOnInit(): void {

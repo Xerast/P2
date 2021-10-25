@@ -44,18 +44,6 @@
             <br>
             <label class="rating" id= "rating" for="stars">Rating:</label>
             <br>
-<<<<<<< HEAD
-            <div class="stars" name="stars" #stars>
-                  <input class="star star-5" id="5" type="radio" name="star" value="5" ngModel/>
-                  <label class="star star-5" for="5"></label>
-                  <input class="star star-4" id="4" type="radio" name="star" value="4" ngModel/>
-                  <label class="star star-4" for="4"></label>
-                  <input class="star star-3" id="3" type="radio" name="star" value="3" ngModel/>
-                  <label class="star star-3" for="3"></label>
-                  <input class="star star-2" id="2" type="radio" name="star" value="2" ngModel/>
-                  <label class="star star-2" for="2"></label>
-                  <input class="star star-1" id="1" type="radio" name="star" value="1" ngModel/>
-=======
             <div class="stars" name="stars">
                   <input class="star star-5 form-control" id="5" type="radio" name="star" value="5" [(ngModel)]="stars.value"/>
                   <label class="star star-5" for="5"></label>
@@ -66,17 +54,12 @@
                   <input class="star star-2 form-control" id="2" type="radio" name="star" value="2" [(ngModel)]="stars.value"/>
                   <label class="star star-2" for="2"></label>
                   <input class="star star-1 form-control" id="1" type="radio" name="star" value="1" [(ngModel)]="stars.value"/>
->>>>>>> main
                   <label class="star star-1" for="1"></label>
               </div>   
             <br>
             <button type="submit" id="btn" class="btn btn-primary"
                 (click)="addPost({title: title.value, body: review.value, image_url: image.value,
-<<<<<<< HEAD
-                 recommend_rest: recommend.checked, rating: stars.id})">
-=======
                  recommend_rest: recommend.checked, rating: stars.value})">
->>>>>>> main
                 Post
             </button>
             
