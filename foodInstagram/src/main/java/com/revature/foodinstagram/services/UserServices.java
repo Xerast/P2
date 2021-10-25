@@ -19,7 +19,7 @@ public class UserServices {
         this.userRepo = userRepo;
     }
 
-    public Boolean getByUsername(User user){
+    public User getByUsername(User user){
         System.out.println(user);
         User u =  userRepo.findByUsername(user.getUsername());
         String username = u.getUsername();
@@ -27,7 +27,7 @@ public class UserServices {
         System.out.println(username + " the username "+ password + " password |" +"after the user Repo " + u);
         if(username.equals(user.getUsername()) && password.equals(user.getPassword())){
             System.out.println("should be true");
-            return true;
+            return u;
         }
         else{
             System.out.println("Invalid Credendtials");

@@ -1,19 +1,25 @@
 .login-wrapper{
     margin: auto;
-    width: 30rem;
+    width: 25rem;
     /* height: 1px; */
-    padding-top: 40px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 2px;
 }
 .login-body{
+<<<<<<< HEAD
     background: linear-gradient(to bottom, #f0f2f0, #000c40);
     height: 1000px;
+=======
+    background: linear-gradient(to top, #f0f2f0, #000c40);
+    height: 800px;
+>>>>>>> main
 }
 .createAccount{
     float: right;
 }
 .restLikes{
-    width: 28rem;
+    width: 23rem;
+    height: 16rem;
 }
 h1{
     text-align: center;

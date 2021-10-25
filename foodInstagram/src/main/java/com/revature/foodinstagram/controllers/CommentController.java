@@ -5,6 +5,7 @@ import com.revature.foodinstagram.beans.User;
 import com.revature.foodinstagram.repositories.CommentRepo;
 import com.revature.foodinstagram.repositories.UserRepo;
 import com.revature.foodinstagram.services.CommentServices;
+import com.revature.foodinstagram.services.UserServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,10 +16,12 @@ import java.util.List;
 public class CommentController {
 
     private final CommentServices commentServices;
+    private final UserServices userServices
 
     @Autowired
-    public CommentController(CommentServices commentServices){
+    public CommentController(CommentServices commentServices, UserServices userServices){
         this.commentServices = commentServices;
+        this.userServices = userServices;
     }
 
     @GetMapping("/all")
@@ -33,7 +36,10 @@ public class CommentController {
 
 
     @PostMapping(consumes = "application/json", produces = "application/json")
-    public Comment addComment(@RequestBody Comment comment) {
+    public Comment addComment(@CookieValue(value = "id", defaultValue = "1")String id, @RequestBody Comment comment) {
+        int userId = Integer.parseInt(id);
+        User user = userServices.getUserById(userId);
+        comment.setUser(user);
         return commentServices.addComment(comment);
     }
 

@@ -1,26 +1,28 @@
 body{ 
-   background-color: rgb(40, 4, 65);
+    background: linear-gradient(to top, #f0f2f0, #000c40b9);
+    height: auto;
 }
 .header{
     text-align: center;
-    background-color: white;
 }
 .post-button{
     position: fixed;
     bottom: 0;
     right: 0;
-    background-color: rgb(40, 4, 65);
+    background-color: none;
 
 }
 .container{
     width: 50%;
-    background-color: silver;
+    /* background-color: silver; */
 
 }
 .card{
     align-items: center;
     margin-top: 10px;
     margin-bottom: 10px;
+    background: none;
+    border: none;
 }
 .title{
     align-content: center;
