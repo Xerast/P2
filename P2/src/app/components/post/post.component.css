@@ -50,7 +50,8 @@ body{
 button.btn{
     background-color: rgb(93, 99, 102);
     color: white;
-    
+    margin-bottom: 5px;
+    margin-top: 10px;
 }
 
 button.btn-submit{
@@ -58,7 +59,7 @@ button.btn-submit{
     border-radius: 8px;
     background-color: rgb(14, 159, 226);
     border-style: none;
-    
+    margin-bottom: 5px;
 }
 
 button.cancel{
