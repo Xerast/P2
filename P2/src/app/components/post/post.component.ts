@@ -4,25 +4,35 @@ import { Post } from 'src/app/model/post';
 import { PostService } from 'src/app/services/post.service';
 import { Comment } from 'src/app/model/comment';
 import { User } from 'src/app/model/user';
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css']
 })
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 export class PostComponent implements OnInit {
   
   posts: Post[] = [];
   comments: Comment[] = [];
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 
   food = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/12/unhealthiest-foods-planet.jpg"
   constructor(private postService: PostService, private router: Router) { }
 
   ngOnInit(): void {
     this.getPosts();
+    
   }
 
   getPosts(){
@@ -30,6 +40,7 @@ export class PostComponent implements OnInit {
       .subscribe(
         res => {
           this.posts = res;
+          console.log(this.posts);
         },
         err => console.log(err)
       )
@@ -47,6 +58,10 @@ export class PostComponent implements OnInit {
 
   addComment(input: any){
     document.getElementById("commentForm")!.style.display = "none";
+  }
+
+  getComments(post: any){
+    return post.comment;
   }
   
 

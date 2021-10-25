@@ -28,7 +28,10 @@ public class Comment implements Serializable {
 
     private String comment_header;
     private String comment_body;
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     @Column(name = "ref_postid")
     private int postId;
 
