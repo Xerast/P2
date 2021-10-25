@@ -42,7 +42,7 @@ public class PostServices {
             for(int j = 1; j < cLength; j++){
                 Comment c = comments.get(j);
                 if( p.getId() == c.getPostId()){
-                    p.setComment(c);
+                    p.setComment(comments);
                 }
             }
         }
