@@ -1,5 +1,6 @@
 package com.revature.foodinstagram.beans;
 
+import jdk.nashorn.internal.ir.annotations.Reference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -28,6 +29,7 @@ public class Comment implements Serializable {
     private String comment_header;
     private String comment_body;
 
+    @Column(name = "ref_postid")
     private int postId;
 
 

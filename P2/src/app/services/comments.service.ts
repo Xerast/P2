@@ -8,7 +8,7 @@ import { catchError, map } from 'rxjs/operators';
 })
 export class UpdateCommentsService {
 
-  private baseUrl: string = "http://localhost:8080/foodgram/posts";
+  private baseUrl: string = "http://localhost:8080/foodgram/comments";
   headers  = new HttpHeaders().set('content-type', 'application/json')
   .set('Access-Control-Allow-Origin', '*')
 

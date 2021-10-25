@@ -37,15 +37,23 @@ public class PostServices {
         return postRepo.findAll();
 =======
         List<Post> post = postRepo.findAll();
+        System.out.println(post);
         List<Comment> comments = commentRepo.findAll();
-        int length = post.size() + 1;
-        int cLength = comments.size()+1;
-        for(int i = 1; i < length; i++){
+        System.out.println(comments);
+        int length = post.size();
+        int cLength = comments.size();
+        for(int i = 0; i < length; i++){
             Post p = post.get(i);
-            for(int j = 1; j < cLength; j++){
+            for(int j = 0; j < cLength; j++){
                 Comment c = comments.get(j);
                 if( p.getId() == c.getPostId()){
-                    p.setComment(c);
+
+                    p.setComment(comments);
+
+                    List<Comment> com = p.getComment();
+                    com.add(c);
+                    p.setComment(com);
+
                 }
             }
         }

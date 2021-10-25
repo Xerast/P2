@@ -3,10 +3,11 @@ package com.revature.foodinstagram.beans;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
+
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -24,8 +25,8 @@ public class Post implements Serializable {
     @ManyToOne
     @JoinColumn(name = "posterid")
     private User user;
-
-    private List<Comment> comment;
+    @Transient
+    private List<Comment> comment = new ArrayList<>();
 
     private String title;
     private String body;
