@@ -1,9 +1,9 @@
 .login-wrapper{
     margin: auto;
     width: 30rem;
-    /* height: 1px; */
-    padding-top: 40px;
-    padding-bottom: 10px;
+    height: 1px;
+    padding-top: 20px;
+    padding-bottom: 0px;
 }
 .login-body{
     background: linear-gradient(to top, #f0f2f0, #000c40);

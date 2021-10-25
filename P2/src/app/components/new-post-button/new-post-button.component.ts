@@ -6,7 +6,6 @@ import { PostService } from 'src/app/services/post.service';
 
 
 function openForm(){
-  console.log("inside openform")
   document.getElementById("myForm")!.style.display = "block";
 }
 
@@ -22,6 +21,7 @@ function closeForm(){
 export class NewPostButtonComponent implements OnInit {
   postData : Post | any;
 
+  
   constructor(private router: Router,
     private postService: PostService) { }
 
@@ -43,9 +43,12 @@ export class NewPostButtonComponent implements OnInit {
       )
   }
 
-  // onsubmit(data: NgForm){
-  //   console.log(data.value.review);
-  // }
+  onsubmit(data: NgForm){
+    console.log(data.value.review);
+    console.log(data.value.star);
+    document.getElementById("myForm")!.style.display = "none";
+  }
+
   cancel(){
     closeForm();
   }
