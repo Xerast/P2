@@ -21,6 +21,7 @@ function closeForm(){
 export class NewPostButtonComponent implements OnInit {
   postData : Post | any;
 
+  stars= {value: 0};
   
   constructor(private router: Router,
     private postService: PostService) { }
