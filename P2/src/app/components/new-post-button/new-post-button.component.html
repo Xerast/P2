@@ -29,15 +29,15 @@
                 <input id="title" type="text"  name="title" placeholder="Title" #title ngModel>
             </label><br>    
             <label for="postImage">
-                Upload Photo:
+                Upload Picture Link:
                 <br>
-                <input accept="image/*" type="file" id="postImage" #image ngModel>
+                <input type="text" id="postImage" #image ngModel>
                 <!-- <img id="postImage" type="file"  name="postImage"> -->
             </label><br>
             <label for="review">
                 Review:
                 <input id="review" type="text"  name="review" maxlength="150" placeholder="Max-Length 150" #review ngModel>
-            </label><br>
+            </label>
             <br>
             <label for="recommend">Recommend:</label>
             <input type="checkbox" id="recommend" value="false" #recommend ngModel>
