@@ -19,12 +19,27 @@
                 <div class="rating">Rating of: {{ post.rating }}</div>
             </div> 
             <div>
-                <button type="button" class="btn" id="comment" (click)="gotoComment()">Comment</button> 
+                <button type="button" class="btn" id="comment" (click)="gotoComment()" >Comment</button> 
            </div>
         </div>
     </div>
 </div>
 
+<div class="comment-popup" id="commentForm">
+    <form>
+        <label for="comment">
+            Comment:
+            <br>
+            <input type="text" name="comment" id="comment" #comment ngModel>
+        </label>
+        <br>
+        <button type="button" class="btn-submit"
+        (click)="addComment({comment_body: comment.value})">Post
+        </button>
+        <br><br>
+        <button type="button" class="cancel" (click)="cancel()">Cancel</button>
+    </form>
+</div>
 
 
 <div class="post-button">
