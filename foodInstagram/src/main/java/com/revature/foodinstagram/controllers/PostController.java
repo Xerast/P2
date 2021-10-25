@@ -2,12 +2,16 @@ package com.revature.foodinstagram.controllers;
 
 import com.revature.foodinstagram.beans.Comment;
 import com.revature.foodinstagram.beans.Post;
+import com.revature.foodinstagram.beans.User;
 import com.revature.foodinstagram.repositories.CommentRepo;
 import com.revature.foodinstagram.repositories.PostRepo;
 import com.revature.foodinstagram.services.PostServices;
+import com.revature.foodinstagram.services.UserServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @RestController
@@ -15,10 +19,12 @@ import java.util.List;
 public class PostController {
 
     private final PostServices postServices;
+    private final UserServices userServices;
 
     @Autowired
-    public PostController(PostServices postServices) {
+    public PostController(PostServices postServices, UserServices userServices) {
         this.postServices = postServices;
+        this.userServices = userServices;
     }
 
     @GetMapping
@@ -33,7 +39,10 @@ public class PostController {
 
 
     @PostMapping(consumes = "application/json", produces = "application/json")
-    public void addPost(@RequestBody Post post) {
+    public void addPost(@CookieValue(value = "id", defaultValue = "1")String id, @RequestBody Post post) {
+        int userId = Integer.parseInt(id);
+        User user = userServices.getUserById(userId);
+        post.setUser(user);
         postServices.addPost(post);
 
     }
