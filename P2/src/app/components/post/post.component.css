@@ -22,15 +22,23 @@ body{
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: rgba(29, 58, 82, 0.274);
+    padding-left: 10px;
+    padding-right: 10px;
     
 }
 .title{
     text-align: center;
+    font-weight: bold;
 }
-/* 
+
 .name{
-    text
-} */
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rating:hover{
+    color: yellow;
+}
 .image{
     height: 400px;
     width: 100%;
