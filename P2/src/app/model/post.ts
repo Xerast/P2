@@ -1,4 +1,5 @@
 import { User } from "./user";
+import { Comment } from "./comment"
 
 export interface Post{
 
@@ -8,6 +9,7 @@ export interface Post{
      body: string;
      image_url: string;
      recommend_rest: boolean ;
+     comment: Comment;
      rating: string;
      
 

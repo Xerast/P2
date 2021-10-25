@@ -18,12 +18,27 @@
                 <div class="rec">Recommended: {{ post.recommend_rest }}</div>
                 <div class="rating">Rating of: {{ post.rating }}</div>
             </div> 
+<<<<<<< Updated upstream
             <div>
                 <button type="button" class="btn" id="comment" (click)="gotoComment()" >Comment</button> 
            </div>
+=======
+            <div class="comments" *ngFor= "let comment of comments">
+                <div class="user-info">
+                    <p class="name">{{ post.comment.user.firstname }} {{ post.comment.user.lastname }}</p>
+                    <p class="username">@{{ post.comment.user.username }} </p>
+                </div>
+                <div class="comment-info">
+                    <h5>{{ post.comment.comment_header }}</h5>
+                    <div class="cbody">{{ post.comment.comment_body }}</div>
+
+                </div>
+
+            </div>
+        </div>
+>>>>>>> Stashed changes
         </div>
     </div>
-</div>
 
 <div class="comment-popup" id="commentForm">
     <form>
@@ -45,3 +60,7 @@
 <div class="post-button">
 <app-new-post-button></app-new-post-button>
 </div>
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes

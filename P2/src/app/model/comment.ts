@@ -1,4 +1,3 @@
-import { Post } from "./post";
 import { User } from "./user";
 
 export interface Comment{
@@ -7,7 +6,7 @@ export interface Comment{
      user: User;
      comment_header: string;
      comment_body: string;
-     post:  Post;
+     post:  number;
 
   
 
