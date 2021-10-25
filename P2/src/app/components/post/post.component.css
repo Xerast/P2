@@ -47,8 +47,10 @@ body{
     padding-right: 10px;
     padding-bottom: 10px;
 }
-button.comment{
-
+button.btn{
+    background-color: rgb(93, 99, 102);
+    color: white;
+    
 }
 
 button.btn-submit{
