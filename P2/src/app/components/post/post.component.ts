@@ -23,6 +23,7 @@ export class PostComponent implements OnInit {
 
   ngOnInit(): void {
     this.getPosts();
+    
   }
 
   getPosts(){
@@ -30,6 +31,7 @@ export class PostComponent implements OnInit {
       .subscribe(
         res => {
           this.posts = res;
+          console.log(this.posts);
         },
         err => console.log(err)
       )
@@ -47,6 +49,10 @@ export class PostComponent implements OnInit {
 
   addComment(input: any){
     document.getElementById("commentForm")!.style.display = "none";
+  }
+
+  getComments(post: any){
+    return post.comment;
   }
   
 
