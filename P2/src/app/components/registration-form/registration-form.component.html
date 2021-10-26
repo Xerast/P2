@@ -3,18 +3,6 @@
                 <h1>Welcome!</h1>
                 <h4>Please follow the steps below to create an account:</h4>
 
-<<<<<<< HEAD
-            <form class="form-group" #NewUser="ngForm">
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="username" #username>
-                    <label for="username">Please Enter a Username<span style="color:#ff0000">*</span></label>
-                </div>
-                <div class="form-floating">
-                    <input type="email" class="form-control" id="email" #email>
-                    <label for="floatingInput">Please Enter Your E-mail<span style="color:#ff0000">*</span></label> 
-                </div>
-        
-=======
 <form class="form-group" #NewUser="ngForm">
     <div class="form-floating mb-3">
         <input type="text" class="form-control" name="username" id="username" [(ngModel)]="user.username" #username="ngModel" required minlength="4">
@@ -25,7 +13,6 @@
         
             <label for="username">Please Enter a Username<span style="color:#ff0000">*</span></label>
         </div>
->>>>>>> main
         <div class="form-floating mb-3">
             <input type="email" class="form-control" id="email" #email>
             <label for="email">Please Enter Your E-mail<span style="color:#ff0000">*</span></label> 
