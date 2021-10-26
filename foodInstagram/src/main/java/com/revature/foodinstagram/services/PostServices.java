@@ -44,7 +44,10 @@ public class PostServices {
             for(int j = 0; j < cLength; j++){
                 Comment c = comments.get(j);
                 if( p.getId() == c.getPostId()){
+<<<<<<< HEAD
                     p.setComment(comments);
+=======
+>>>>>>> 473349f0cbd285c803b61ddf328398759f2a83dc
                     List<Comment> com = p.getComment();
                     com.add(c);
                     p.setComment(com);

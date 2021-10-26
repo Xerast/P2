@@ -1,6 +1,19 @@
 .bg-dark{
     background-color: #758BFD !important;
 }
+<<<<<<< HEAD
 .navlist{
     position: relative;
 }
+=======
+
+.navlist{
+    position: relative;
+}
+
+a.navbar-brand:hover{
+    transition: all .2s;
+    transform: rotate(360deg) scale(1.3);
+    color: rgba(99, 8, 122, 0.815);
+}
+>>>>>>> 473349f0cbd285c803b61ddf328398759f2a83dc
