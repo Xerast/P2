@@ -16,7 +16,7 @@
                 <hr>
                 <img class="image" src="{{ post.image_url }}">
                 <div class="body">Review: {{ post.body }}</div>
-                <div class="rec">Recommended: {{ post.recommend_rest }}</div>
+                <div class="rec" *ngIf="post.recommend_rest == true">Restaurant is Recommended!</div>
                 <div class="rating">{{ post.rating }} Stars</div>
             </div> 
 
