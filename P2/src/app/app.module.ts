@@ -32,10 +32,8 @@ const routes: Routes = [
   {path: 'post', redirectTo: 'post', pathMatch: 'full'},
   {path: 'register', component: RegistrationFormComponent},
   {path: 'register', redirectTo: 'register', pathMatch: 'full'},
-  
   {path: 'comment', component: CommentComponent},
   {path: 'comment', redirectTo: 'comment', pathMatch: 'full'}
-  
 ];
 
 @NgModule({

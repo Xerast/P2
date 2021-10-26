@@ -1,8 +1,12 @@
+<<<<<<< HEAD
+=======
+<body>
+>>>>>>> main
 <app-navbar></app-navbar>
 <div class="container">
-    <div class="header">
+    <!-- <div class="header">
         <h1>FoodStagram</h1>
-    </div>
+    </div> -->
         <div class="posts" *ngFor="let post of posts">
             <div class="card">
             <div class="user-info">
@@ -16,16 +20,15 @@
                 <img class="image" src="{{ post.image_url }}">
                 <div class="body">Review: {{ post.body }}</div>
                 <div class="rec">Recommended: {{ post.recommend_rest }}</div>
-                <div class="rating">Rating of: {{ post.rating }}</div>
+                <div class="rating">{{ post.rating }} Stars</div>
             </div> 
-            <div class="comments" *ngFor= "let comment of comments">
+            <div class="comments" *ngFor="let comment of getComments(post)">
                 <div class="user-info">
-                    <p class="name">{{ post.comment.user.firstname }} {{ post.comment.user.lastname }}</p>
-                    <p class="username">@{{ post.comment.user.username }} </p>
+                    <p class="name">{{ comment.user.firstname }} {{ comment.user.lastname }}</p>
+                    <p class="username">@{{ comment.user.username }} </p>
                 </div>
                 <div class="comment-info">
-                    <h5>{{ post.comment.comment_header }}</h5>
-                    <div class="cbody">{{ post.comment.comment_body }}</div>
+                    <div class="cbody">{{ comment.comment_body }}</div>
 
                 </div>
 
@@ -44,11 +47,11 @@
             <br>
             <input type="text" name="comment" id="comment" #comment ngModel>
         </label>
-        <br><br>
+        <br>
         <button type="button" class="btn-submit"
         (click)="addComment({comment_body: comment.value})">Post
         </button>
-        <br><br>
+        <br>
         <button type="button" class="cancel" (click)="cancel()">Cancel</button>
     </form>
 </div>

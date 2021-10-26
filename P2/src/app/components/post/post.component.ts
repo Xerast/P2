@@ -5,13 +5,11 @@ import { PostService } from 'src/app/services/post.service';
 import { Comment } from 'src/app/model/comment';
 import { User } from 'src/app/model/user';
 
-
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css']
 })
-
 export class PostComponent implements OnInit {
   
   posts: Post[] = [];
@@ -22,6 +20,7 @@ export class PostComponent implements OnInit {
 
   ngOnInit(): void {
     this.getPosts();
+    
   }
 
   getImage(){
@@ -32,6 +31,7 @@ export class PostComponent implements OnInit {
       .subscribe(
         res => {
           this.posts = res;
+          console.log(this.posts);
         },
         err => console.log(err)
       )
@@ -49,6 +49,10 @@ export class PostComponent implements OnInit {
 
   addComment(input: any){
     document.getElementById("commentForm")!.style.display = "none";
+  }
+
+  getComments(post: any){
+    return post.comment;
   }
   
 

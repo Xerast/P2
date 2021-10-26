@@ -1,5 +1,5 @@
 body{ 
-    background: linear-gradient(to top, #f0f2f0, #000c40b9);
+    background: linear-gradient(to top, #f0f2f0, #000c40b9) !important;
     height: auto;
 }
 .header{
@@ -18,15 +18,19 @@ body{
 
 }
 .card{
-    align-items: center;
+    align-items: right;
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: rgba(29, 58, 82, 0.274);
     
 }
 .title{
-    align-content: center;
+    text-align: center;
 }
+/* 
+.name{
+    text
+} */
 .image{
     height: 400px;
     width: 100%;
@@ -47,8 +51,11 @@ body{
     padding-right: 10px;
     padding-bottom: 10px;
 }
-button.comment{
-
+button.btn{
+    background-color: rgb(93, 99, 102);
+    color: white;
+    margin-bottom: 5px;
+    margin-top: 10px;
 }
 
 button.btn-submit{
@@ -56,7 +63,7 @@ button.btn-submit{
     border-radius: 8px;
     background-color: rgb(14, 159, 226);
     border-style: none;
-    
+    margin-bottom: 5px;
 }
 
 button.cancel{

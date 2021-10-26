@@ -44,10 +44,23 @@ public class PostServices {
             for(int j = 0; j < cLength; j++){
                 Comment c = comments.get(j);
                 if( p.getId() == c.getPostId()){
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+>>>>>>> main
                     p.setComment(comments);
                     List<Comment> com = p.getComment();
                     com.add(c);
                     p.setComment(com);
+<<<<<<< HEAD
+=======
+
+=======
+                    List<Comment> com = p.getComment();
+                    com.add(c);
+                    p.setComment(com);
+>>>>>>> Stashed changes
+>>>>>>> main
                 }
             }
         }
