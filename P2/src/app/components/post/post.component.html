@@ -31,7 +31,7 @@
 
             </div>
             <div>
-                <button type="button" class="btn" id="comment" (click)="gotoComment()" >Comment</button> 
+                <button type="button" class="btn" id="comment" (click)="gotoComment(post)" >Comment</button> 
            </div>
         </div>
         </div>
@@ -46,7 +46,7 @@
         </label>
         <br>
         <button type="button" class="btn-submit"
-        (click)="addComment({comment_body: comment.value})">Post
+        (click)="addComment({comment_body: comment.value, postId: this.getId })">Post
         </button>
         <br>
         <button type="button" class="cancel" (click)="cancel()">Cancel</button>
