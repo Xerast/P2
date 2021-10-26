@@ -1,5 +1,5 @@
 body{ 
-    background: linear-gradient(to top, #f0f2f0, #000c40b9) !important;
+    background: white !important;
     height: auto;
 }
 .header{
@@ -21,7 +21,7 @@ body{
     align-items: right;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: rgba(29, 58, 82, 0.274);
+    background-color: rgba(124, 192, 248, 0.274);
     
 }
 .title{
@@ -46,7 +46,7 @@ body{
     box-shadow: rgb(3, 3, 3);
     z-index: 9;
     color: white;
-    background-color: rgba(44, 43, 43, 0.836);
+    background-color: rgba(189, 149, 149, 0.836);
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
