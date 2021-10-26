@@ -5,3 +5,9 @@
 .navlist{
     position: relative;
 }
+
+a.navbar-brand:hover{
+    transition: all .2s;
+    transform: rotate(360deg) scale(1.3);
+    color: rgba(99, 8, 122, 0.815);
+}
