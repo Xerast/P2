@@ -83,3 +83,12 @@ button.cancel{
     border-style: none;
     border-top: 10px;
 }
+/* 
+div.rec{
+    
+   height: 20px;
+   width: 10px;
+   border-bottom: 5px solid rgb(0, 255, 0);
+   border-right: 5px solid rgb(0, 255, 0);
+   transform: rotate(20deg);
+} */
