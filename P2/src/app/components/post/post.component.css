@@ -16,8 +16,6 @@ body{
 }
 .container{
     width: 50%;
-    /* background-color: silver; */
-
 }
 .card{
     align-items: right;
@@ -39,7 +37,9 @@ body{
 }
 
 .rating:hover{
-    color: yellow;
+    transition: all .2s;
+    color: #FE7;
+    text-shadow: 0 0 20px rgb(153, 145, 34);
 }
 .image{
     height: 400px;
