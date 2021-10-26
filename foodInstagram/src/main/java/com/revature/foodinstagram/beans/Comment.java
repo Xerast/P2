@@ -28,7 +28,10 @@ public class Comment implements Serializable {
 
     private String comment_header;
     private String comment_body;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 473349f0cbd285c803b61ddf328398759f2a83dc
     @Column(name = "ref_postid")
     private int postId;
 

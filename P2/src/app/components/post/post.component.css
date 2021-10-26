@@ -10,27 +10,41 @@ body{
     bottom: 0;
     right: 0;
     background-color: none;
+    margin-bottom: 10px;
+    margin-right: 10px;
 
 }
 .container{
     width: 50%;
-    /* background-color: silver; */
-
 }
 .card{
     align-items: right;
     margin-top: 10px;
     margin-bottom: 10px;
+<<<<<<< HEAD
     background-color: rgba(124, 192, 248, 0.274);
+=======
+    background-color: rgba(29, 58, 82, 0.274);
+    padding-left: 10px;
+    padding-right: 10px;
+>>>>>>> 473349f0cbd285c803b61ddf328398759f2a83dc
     
 }
 .title{
     text-align: center;
+    font-weight: bold;
 }
-/* 
+
 .name{
-    text
-} */
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rating:hover{
+    transition: all .2s;
+    color: #FE7;
+    text-shadow: 0 0 20px rgb(153, 145, 34);
+}
 .image{
     height: 400px;
     width: 100%;

@@ -46,12 +46,17 @@ public class PostServices {
                 if( p.getId() == c.getPostId()){
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< Updated upstream
 >>>>>>> main
 =======
 >>>>>>> main
+=======
+>>>>>>> main
                     p.setComment(comments);
+=======
+>>>>>>> 473349f0cbd285c803b61ddf328398759f2a83dc
                     List<Comment> com = p.getComment();
                     com.add(c);
                     p.setComment(com);
