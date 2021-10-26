@@ -15,6 +15,7 @@ export class PostComponent implements OnInit {
   
   posts: Post[] = [];
   comments: Comment[] = [];
+  id = {value: 0};
 
   food = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/12/unhealthiest-foods-planet.jpg"
   constructor(private postService: PostService, private commentService: UpdateCommentsService, private router: Router) { }
@@ -36,13 +37,10 @@ export class PostComponent implements OnInit {
     
   }
 
-  gotoComment(post: any){
+  gotoComment(){
     
     document.getElementById("commentForm")!.style.display = "block";
-    let id = this.getId(post);
-    return id;
-
-      
+    
     
   }
   
@@ -52,23 +50,25 @@ export class PostComponent implements OnInit {
 
   addComment(input: any){
     console.log(input);
-    // this.commentService.addComment(input)
-    //   .subscribe(
-    //     res => {
-    //       console.log(res)
-    //     },
-    //     err => console.log(err)
-    //   )
-    document.getElementById("commentForm")!.style.display = "none";
+    this.commentService.addComment(input)
+      .subscribe(
+        res => {
+          console.log(res)
+        },
+        err => console.log(err)
+      )
+    
   }
 
   getComments(post: any){
     return post.comment;
   }
-getId(post: any){
-  console.log(post.id)
-  let id = post.id
-  return id;
+   getId(post: any){
+     console.log(post.id);
+     return post.id;
    }
 
+
 }
+
+
